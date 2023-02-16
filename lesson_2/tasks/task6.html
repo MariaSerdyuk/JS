@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ukr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Задача №6 </h1>
+	<p>
+		З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та
+		загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+	</p>
+	<script>
+		//1.Вводимо необхідні дані
+		let goods1Amount = parseInt(prompt("Ввести кількість товару №1","Наприклад, 10"))
+		let goods1Price = parseFloat(prompt("Ввести вартість товару №1","Наприклад, 15.78"))
+		let goods2Amount = parseInt(prompt("Ввести кількість товару №2","Наприклад, 10"))
+		let goods2Price = parseFloat(prompt("Ввести вартість товару №2","Наприклад, 15.78"))
+		let goods3Amount = parseInt(prompt("Ввести кількість товару №3","Наприклад, 10"))
+		let goods3Price = parseFloat(prompt("Ввести вартість товару №3","Наприклад, 15.78"))
+
+		//2.Знаходимо результат
+		//2.1 Вартість кожного товару окремо
+		let goods1TotalValue = goods1Amount * goods1Price
+		let goods2TotalValue = goods2Amount * goods2Price
+		let goods3TotalValue = goods3Amount * goods3Price
+		//2.2 Загальна вартість
+		let commonGoodsTotalValue = goods1TotalValue + goods2TotalValue + goods3TotalValue
+
+		//3.Виводимо результат
+		document.write(`
+		<table>
+			<tbody bgcolor="lightblue">
+				<tr>
+					<td>Товар №</td>
+					<td>Кількість товару (шт)</td>
+					<td>Вартість товару (за шт)</td>
+					<td>Загальна вартість позиції </td>
+				</tr>
+				<tr>
+					<td>№1</td>
+					<td>${goods1Amount}</td>
+					<td>${goods1Price}</td>
+					<td>${goods1TotalValue}</td>
+				</tr>
+				<tr>
+					<td>№2</td>
+					<td>${goods2Amount}</td>
+					<td>${goods2Price}</td>
+					<td>${goods2TotalValue}</td>
+				</tr>
+				<tr>
+					<td>№3</td>
+					<td>${goods3Amount}</td>
+					<td>${goods3Price}</td>
+					<td>${goods3TotalValue}</td>
+				</tr>
+				<tr>
+					<td>Загальна вартість <br> товару:</td>
+					<td>${commonGoodsTotalValue}</td>
+				</tr>
+			</tbody>
+		</table>
+		`)
+	</script>
+</body>
+
+</html>

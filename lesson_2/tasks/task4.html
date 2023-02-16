@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ukr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>
+		Задача №4
+	</h1>
+	<p>
+		Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.
+	</p>
+	<script>
+		//1.Вводимо необхідні дані
+		const CENTIMETERS = parseInt(prompt('Введіть довжину у см','Наприклад, 60'))
+
+		//2.Проміжні значення 
+		const METER = 0.01
+		const KILOMETER = 0.001
+
+		//3. Знаходимо результат
+		const cmInMeter = CENTIMETERS * METER
+		const cmInKilometer = cmInMeter * KILOMETER
+
+		//4.Виводимо результат
+		document.write(`
+		 	Почтакове значення ${CENTIMETERS} (см) це: <br>
+			Метри: ${cmInMeter.toFixed(2)} (м) <br>
+			Кілометри: ${cmInKilometer.toFixed(5)} (км) <br>
+		`)
+	</script>
+</body>
+
+</html>
